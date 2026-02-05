@@ -1,23 +1,25 @@
-Objective:
+
+
+
+
+ Objective
 
 Create your own directory with your daily activities.
 
 Work on a personal feature branch.
 
-Simulate a collaboration conflict by editing a shared file.
+Upload your acts.
 
-Upload Your acts
-
-Merge your work into the Main branch and resolve the resulting conflict.
+Merge your work into the Main branch.
 
 Phase 1: Setup & Branching
 
-Clone the Repository (If you haven't already):
+1. Clone the Repository (If you haven't already):
 
-
+  
 git clone <repository_url>
 cd <repository_name>
-Create Your Personal Branch:
+2. Create Your Personal Branch:
 
 Naming convention: user/<your-firstname>
 
@@ -26,7 +28,7 @@ git checkout -b user/yourname
 # Example: git checkout -b user/juan
 Phase 2: The Work (File Structure)
 
-Create Your Directory Structure: Navigate to the Files folder and create a folder with your name. Inside that, create the structure for Day 1 and Day 2.
+1. Create Your Directory Structure: Navigate to the Files folder and create a folder with your name. Inside that, create the structure for Day 1 and Day 2.
 
 Structure:
 
@@ -39,89 +41,43 @@ Files/
     └── Day 2/
         ├── Module 1.txt
         └── Module 2.txt
-Add Content: Fill the module text files with dummy data or your activity answers.
+2. Add Content: Fill the module text files with your activity answers.
 
-Add your name to the very top line of the file (Do not append it to the bottom; overwrite or push the top line down).
-
-Note: Since everyone is editing the top line, this will force a conflict.
-
-Stage and Commit Your Work:
+3. Stage and Commit Your Work:
 
   
 git add .
-git commit -m "Added activity files for <Your Name> and updated attendance"
+git commit -m "Added activity files for <Your Name>"
+Phase 3: Pushing & Merging
 
-
-
-Phase 3: Pushing & Simulating the Conflict
-
-Push Your Branch: Upload your personal branch to the remote repository.
+1. Push Your Branch: Upload your personal branch to the remote repository.
 
   
 git push -u origin user/yourname
-Update Your Local Main: Now, imagine your classmates have already pushed their code to main. You need to pull their changes before you can merge yours.
+2. Update Your Local Main: Before merging, it is best practice to ensure your local main is up to date.
 
   
 git checkout main
 git pull origin main
-Attempt the Merge (The Conflict Happens Here): Now, try to merge your personal branch into the main branch.
+3. Merge Your Branch: Now, merge your personal branch into the main branch. Since you are only adding new files in your own folder, this should proceed automatically without conflicts.
 
   
 git merge user/yourname
-STOP! You should see an error message similar to:
-
-CONFLICT (content): Merge conflict in attendance.txt Automatic merge failed; fix conflicts and then commit the result.
-
-
-
-
-Phase 4: Resolving the Conflict
-
-You cannot push to main until this is fixed. Git is confused because you edited the top line of attendance.txt, but someone else (or the original file) has different content there.
-
-Open the Conflicted File: Open attendance.txt in your code editor (VS Code, Notepad++, etc.).
-
-Find the Conflict Markers: Look for these symbols:
-
-Plaintext
-<<<<<<< HEAD
-(Content currently in Main)
-=======
-(Your Name that you added)
->>>>>>> user/yourname
-Fix the Code:
-
-Decide how the final file should look. In this case, keep both names or arrange them in a list.
-
-Delete the marker lines (<<<<<<<, =======, >>>>>>>).
-
-Ensure the list looks clean.
-
-Finalize the Merge: Once the file is saved and clean:
-
-  
-git add attendance.txt
-git commit -m "Resolved merge conflict in attendance list"
-Push to Main: Now that the conflict is resolved and your files are merged:
+4. Push Changes to Main: Sync the merged changes back to the remote repository.
 
   
 git push origin main
-Success! You have successfully uploaded your files and resolved a merge conflict.
-
-
-
-
 Summary of Commands for Quick Reference
 
   
 # 1. Create Branch
 git checkout -b user/yourname
 
-# 2. (Do your work in Files/<Name> and edit attendance.txt)
+# 2. (Do your work in Files/<Your_Name>)
 
 # 3. Save Changes
 git add .
-git commit -m "My work"
+git commit -m "Added my activity files"
 
 # 4. Push your branch
 git push origin user/yourname
@@ -130,12 +86,8 @@ git push origin user/yourname
 git checkout main
 git pull origin main
 
-# 6. Merge (Expect Conflict)
+# 6. Merge
 git merge user/yourname
 
-# 7. (Fix conflict in editor manually)
-
-# 8. Finalize
-git add .
-git commit -m "Fixed conflict"
+# 7. Finalize
 git push origin main
