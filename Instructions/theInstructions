@@ -1,93 +1,69 @@
+Activity: Simulating a Pull Request
+
+Objective: Create a feature branch, add a dummy file to your personal folder, and submit a Pull Request (PR) for review.
+
+Step 1: Create your Branch
+
+Before making any changes, create a new branch. This ensures you aren't working directly on the main or master branch.
+
+Format: (YourName)PR
+
+Command:
+
+Bash
+git checkout -b bertPR
+(Replace bertPR with your actual name, e.g., josephPR, shaPR)
+
+Step 2: Navigate to your Folder
+
+Locate your specific folder inside the Files directory.
+
+Command:
+
+Bash
+cd Files/bert
+(Replace bert with your specific folder name shown in the file explorer)
+
+Step 3: Create the Dummy File
+
+Create a text file named gitAct2.txt and add some dummy text to it.
+
+Step 4: Stage and Commit the Changes
+
+Now, save your changes to your new branch.
+
+Command (Stage the file):
+
+Bash
+git add gitAct2.txt
+Command (Commit):
+
+Bash
+git commit -m "Added gitAct2.txt for PR simulation"
+Step 5: Push the Branch
+
+Upload your new branch to the remote repository (GitHub/GitLab).
+
+Command:
+
+Bash
+git push -u origin bertPR
+(Remember to use the exact branch name you created in Step 1)
+
+Step 6: Create the Pull Request
+
+Go to the repository link in your web browser.
+
+You should see a yellow banner saying "bertPR had recent pushes less than a minute ago" (or similar).
+
+Click the green "Compare & pull request" button.
+
+Ensure the title is descriptive and click "Create pull request."
+
+Do not merge it yourself! Wait for the instructor to review.
 
 
 
 
- Objective
 
-Create your own directory with your daily activities.
-
-Work on a personal feature branch.
-
-Upload your acts.
-
-Merge your work into the Main branch.
-
-Phase 1: Setup & Branching
-
-1. Clone the Repository (If you haven't already):
-
-  
-git clone <repository_url>
-cd <repository_name>
-2. Create Your Personal Branch:
-
-Naming convention: user/<your-firstname>
-
-  
-git checkout -b user/yourname
-# Example: git checkout -b user/juan
-Phase 2: The Work (File Structure)
-
-1. Create Your Directory Structure: Navigate to the Files folder and create a folder with your name. Inside that, create the structure for Day 1 and Day 2.
-
-Structure:
-
-Plaintext
-Files/
-└── <Your_Name>/
-    ├── Day 1/
-    │   ├── Module 1.txt
-    │   └── Module 2.txt
-    └── Day 2/
-        ├── Module 1.txt
-        └── Module 2.txt
-2. Add Content: Fill the module text files with your activity answers.
-
-3. Stage and Commit Your Work:
-
-  
-git add .
-git commit -m "Added activity files for <Your Name>"
-Phase 3: Pushing & Merging
-
-1. Push Your Branch: Upload your personal branch to the remote repository.
-
-  
-git push -u origin user/yourname
-2. Update Your Local Main: Before merging, it is best practice to ensure your local main is up to date.
-
-  
-git checkout main
-git pull origin main
-3. Merge Your Branch: Now, merge your personal branch into the main branch. Since you are only adding new files in your own folder, this should proceed automatically without conflicts.
-
-  
-git merge user/yourname
-4. Push Changes to Main: Sync the merged changes back to the remote repository.
-
-  
-git push origin main
-Summary of Commands for Quick Reference
-
-  
-# 1. Create Branch
-git checkout -b user/yourname
-
-# 2. (Do your work in Files/<Your_Name>)
-
-# 3. Save Changes
-git add .
-git commit -m "Added my activity files"
-
-# 4. Push your branch
-git push origin user/yourname
-
-# 5. Switch to main and update
-git checkout main
-git pull origin main
-
-# 6. Merge
-git merge user/yourname
-
-# 7. Finalize
-git push origin main
+git status
