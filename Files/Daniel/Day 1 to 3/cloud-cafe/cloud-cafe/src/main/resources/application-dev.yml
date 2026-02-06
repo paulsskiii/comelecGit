@@ -1,0 +1,5 @@
+# Note the hierarchical structure. NO TABS allowed!
+cafe:
+  name: "Cloud Cafe (BETA TEST VERSION)"
+  # We can override specific values while inheriting others
+  special: "Experimental Espresso"
