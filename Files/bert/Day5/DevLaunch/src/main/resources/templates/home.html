@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>DevLaunch Portal</title>
+    <link rel="stylesheet" th:href="@{/css/site.css}" />
+</head>
+
+<nav>
+    <a th:href="@{/about}">About Me</a>
+    <a th:href="@{/inventory}">Inventory</a>
+</nav>
+
+
+<body>
+
+    <div class="container">
+        <h1 th:text="${welcomeMessage}">Loading...</h1>
+        <p>This page is served by a Spring Boot Controller!</p>
+    </div>
+
+</body>
+
+</html>
