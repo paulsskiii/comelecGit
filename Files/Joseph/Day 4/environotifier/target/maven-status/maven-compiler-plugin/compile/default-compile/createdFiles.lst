@@ -1,0 +1,4 @@
+com\example\environotifier\NotificationService.class
+com\example\environotifier\ProdNotificationService.class
+com\example\environotifier\DevNotificationService.class
+com\example\environotifier\EnvironotifierApplication.class
