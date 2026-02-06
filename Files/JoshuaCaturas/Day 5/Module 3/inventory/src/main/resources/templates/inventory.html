@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Smart Inventory</title>
+    <style>
+        table { width: 60%; margin: 20px auto; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #2c3e50; color: white; }
+        .out-of-stock { color: red; font-weight: bold; }
+        .low-stock { color: orange; font-weight: bold; }
+        .is-on-sale { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Current Inventory</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Sale Status</th>
+            <th>Stock Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="item : ${products}">
+            
+            <td th:text="${item.name}">Item Name</td>
+            
+            <td th:text="${'$' + item.price}">$0.00</td>
+
+            <td>
+                <span th:if="${item.isOnSale}" class="is-on-sale">
+                    SALE!
+                </span>
+            </td>
+
+            <td>
+                <span th:if="${item.stockQuantity == 0}" class="out-of-stock">
+                    SOLD OUT
+                </span>
+
+                <span th:if="${item.stockQuantity == 1}" class="low-stock">
+                    LAST ONE!
+                </span>
+
+                <span th:unless="${item.stockQuantity < 2}">
+                    In Stock (<span th:text="${item.stockQuantity}"></span>)
+                </span>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
