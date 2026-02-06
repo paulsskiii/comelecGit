@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Confirmed</title>
+    <style>
+        .badge { border: 2px solid #333; width: 300px; padding: 20px; text-align: center; border-radius: 10px; background: #f9f9f9; }
+        h2 { margin: 0; color: #2c3e50; }
+        .workshop { background: #3498db; color: white; padding: 5px; border-radius: 5px; display: inline-block; margin-top: 10px;}
+    </style>
+</head>
+<body>
+
+    <h1>Registration Successful!</h1>
+    
+    <div class="badge" th:object="${confirmedAttendee}">
+        <h2>TECH CONF 2024</h2>
+        <hr/>
+        <h3 th:text="|*{firstName} *{lastName}|">John Doe</h3>
+        <p th:text="*{email}">john@example.com</p>
+        
+        <div class="workshop" th:text="*{workshop}">Topic</div>
+    </div>
+    
+    <br/>
+    <a th:href="@{/register}">Register Another Person</a>
+
+</body>
+</html>
+
