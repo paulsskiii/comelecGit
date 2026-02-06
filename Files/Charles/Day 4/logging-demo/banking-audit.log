@@ -1,0 +1,2 @@
+2026-02-05T16:06:04.419+08:00  INFO 20124 --- [logging-demo] [http-nio-8080-exec-4] c.a.logging_demo.TransactionController   : Received API Request at /pay
+2026-02-05T16:06:04.420+08:00  INFO 20124 --- [logging-demo] [http-nio-8080-exec-4] c.a.logging_demo.TransactionService      : Transaction processed successfully for user: Alice

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Secure Sign Up</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+
+<div class="container">
+    <h2>Join the Gatekeeper</h2>
+    
+    <form th:action="@{/signup}" th:object="${userDto}" method="post">
+        
+        <div class="form-group">
+            <label>Username:</label>
+            <input type="text" th:field="*{username}" 
+                   th:errorclass="is-invalid" />
+            
+            <div class="error-message" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">
+                Username Error Placeholder
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="text" th:field="*{email}" th:errorclass="is-invalid" />
+            <div class="error-message" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="number" th:field="*{age}" th:errorclass="is-invalid" />
+            <div class="error-message" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Bio:</label>
+            <input type="text" th:field="*{bio}" th:errorclass="is-invalid" />
+            <div class="error-message" th:if="${#fields.hasErrors('bio')}" th:errors="*{bio}"></div>
+        </div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+</body>
+</html>

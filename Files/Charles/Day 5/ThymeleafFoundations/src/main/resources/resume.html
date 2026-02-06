@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Resume</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; }
+        .header { border-bottom: 2px solid #333; padding-bottom: 1rem; }
+        h1 { color: #2c3e50; }
+        .role { color: #7f8c8d; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 th:text="${name}">John Doe</h1>
+        
+        <p class="role" th:text="${role}">Senior Software Engineer</p>
+    </div>
+
+    <div class="summary">
+        <h3>Summary</h3>
+        <p th:text="${summary}">
+            A dedicated professional with 10 years of experience in building static websites.
+        </p>
+    </div>
+
+</body>
+</html>

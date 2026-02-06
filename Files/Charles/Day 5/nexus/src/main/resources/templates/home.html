@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layouts/main :: layout(~{:: #main-content}, 'home', ~{:: #sidebar-content})}">    
+    
+    <div id="sidebar-content">
+        <h1>Latest News</h1>
+        <p>Some news from the homepage!</p>
+    </div>
+
+    <div id="main-content">
+        <h1>Welcome to the Nexus</h1>
+        <p>This is the company dashboard. Notice the header above?</p>
+        <p>It was injected by the layout!</p>
+    </div>
+
+</html>
