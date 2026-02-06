@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: inventory
+springdoc:
+  api-docs:
+    path:   
+  swagger-ui:
+    path: /docs
+    tagsSorter: alpha
