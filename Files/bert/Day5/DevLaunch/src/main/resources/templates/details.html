@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Destination Details</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+<body>
+
+    <div class="card" th:object="${place}">
+
+        <h2 th:text="*{city}">City Name</h2>
+        <h4 th:text="*{country}">Country Name</h4>
+        <a th:href="@{https://www.google.com/maps/search/(api=1,query=*{city})}">View <span th:text="*{city}"></span> on
+            Google Maps</a>
+        <p th:text="*{description}">Description goes here...</p>
+
+        <hr />
+
+        <a th:href="@{/dashboard}">Back to Dashboard</a>
+    </div>
+
+</body>
+
+</html>

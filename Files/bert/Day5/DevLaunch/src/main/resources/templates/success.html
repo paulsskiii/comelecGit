@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Success</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Access Granted. Welcome!</h1>
+        <p th:text="|Welcome, ${userDto.username}!|">Welcome, User!</p>
+        <p>You are now a verified member of the Gatekeeper.</p>
+        <a th:href="@{/}">Go to Home</a>
+    </div>
+</body>
+
+</html>

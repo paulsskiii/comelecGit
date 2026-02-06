@@ -1,8 +1,9 @@
-package com.example.DevLaunch;
+package com.example.DevLaunch.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -12,7 +13,7 @@ public class HomeController {
     public String loadHomePage(Model model) {
 
         // 3. We add data to the Model (just like the Context in Module 1)
-        model.addAttribute("welcomeMessage", "Welcome to DevLaunch!");
+        model.addAttribute("welcomeMessage", "Welcome to Home Page!");
 
         // 4. View Resolution:
         // We return "home". Spring Boot checks 'src/main/resources/templates/'
