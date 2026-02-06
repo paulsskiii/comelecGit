@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content, pageName, sidebarContent)">
+<head>
+    <title>Nexus Corp</title>
+    <link rel="stylesheet" th:href="@{/css/site.css}" />
+</head>
+<body>
+
+    <div th:replace="~{fragments/general :: myHeader(${pageName})}"></div>
+
+    <div>
+        <div style="float:left;width:300px;">
+            <div th:replace="~{fragments/general :: mySidebar(${sidebarContent})}"></div>
+        </div>
+        <div style="float:left;width:700px;">
+            <main th:insert="${content}"></main>
+        </div>
+    </div>
+    <div th:replace="~{fragments/general :: myFooter}"></div>
+
+</body>
+</html>
