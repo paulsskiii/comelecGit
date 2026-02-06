@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Destination Details</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+    <div class="card" th:object="${place}">
+        
+        <h2 th:text="*{city}">City Name</h2>
+        <h4 th:text="*{country}">Country Name</h4>
+        
+        <p th:text="*{description}">Description goes here...</p>
+        
+        <hr/>
+        
+        <a th:href="@{/}">Back to Dashboard</a>
+    </div>
+
+</body>
+</html>

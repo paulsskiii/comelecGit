@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Travel Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+    <h1>My Travel Bucket List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Destination</th>
+                <th>Action</th>
+                <th>Map</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="d : ${destinations}">
+                <td>
+                    <span th:text="|${d.city}, ${d.country}|">City, Country</span>
+                </td>
+                <td>
+                    <a th:href="@{/details(id=${d.id})}">View Details</a>
+                </td>
+                <td>
+                    <a th:href="@{https://www.google.com/maps/search/(api=1, query=${d.city})}"><small>View in Map</small></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
