@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: alexandria
+springdoc:
+  api-docs:
+    path: /docs/openapi
+  swagger-ui:
+    path: /docs
+    tagsSorter: alpha 

@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #2c3e50;
+    padding: 1rem;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/* This class will be applied dynamically by Thymeleaf */
+header a.active {
+    color: #f1c40f;
+    border-bottom: 2px solid #f1c40f;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    background: #ecf0f1;
+}
+
+footer {
+    background: #95a5a6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}

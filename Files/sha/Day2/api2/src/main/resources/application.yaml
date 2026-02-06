@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: api2
+springdoc:
+  api-docs:
+    path: /docs/openapi
+
+  swagger-ui:
+    path: /docs
+    tags-sorter: alpha
