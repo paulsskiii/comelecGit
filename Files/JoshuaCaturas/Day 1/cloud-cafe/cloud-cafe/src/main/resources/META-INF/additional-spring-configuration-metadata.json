@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "cafe.name",
+    "type": "java.lang.String",
+    "description": "A description for 'cafe.name'"
+  },
+  {
+    "name": "cafe.special",
+    "type": "java.lang.String",
+    "description": "A description for 'cafe.special'"
+  },
+  {
+    "name": "cafe.contact.email",
+    "type": "java.lang.String",
+    "description": "A description for 'cafe.contact.email'"
+  },
+  {
+    "name": "cafe.contact.phone",
+    "type": "java.lang.String",
+    "description": "A description for 'cafe.contact.phone'"
+  }
+]}
