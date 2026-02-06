@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+    <header th:fragment="myHeader(activeTab)">
+        <nav>
+            <span style="color:white; font-size: 1.2rem; margin-right:20px;">NEXUS CORP</span>
+            
+            <a th:href="@{/}" 
+               th:classappend="${activeTab == 'home'} ? 'active'">Home</a>
+            
+            <a th:href="@{/team}" 
+               th:classappend="${activeTab == 'team'} ? 'active'">Team Directory</a>
+        </nav>
+    </header>
+
+    <footer th:fragment="myFooter">
+        <p>&copy; 2024 Nexus Corp Intranet. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
