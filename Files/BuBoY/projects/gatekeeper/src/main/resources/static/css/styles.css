@@ -1,0 +1,18 @@
+body { font-family: sans-serif; padding: 2rem; background: #f4f4f4; }
+.container { background: white; padding: 2rem; width: 400px; margin: 0 auto; border-radius: 8px; }
+.form-group { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+input { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+button { background: #333; color: white; padding: 0.7rem; width: 100%; border: none; cursor: pointer; }
+
+/* CONCEPT: The class applied by th:errorclass */
+input.is-invalid {
+    border: 2px solid #e74c3c; /* Red Border */
+    background-color: #fadbd8; /* Light Red Background */
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content, pageName)">
+<head>
+    <title>Nexus Corp</title>
+    <link rel="stylesheet" th:href="@{/css/site.css}" />
+</head>
+<body>
+
+    <div th:replace="~{fragments/general :: myHeader(${pageName})}"></div>
+
+    <main th:insert="${content}"></main>
+
+    <div th:replace="~{fragments/general :: myFooter}"></div>
+
+</body>
+</html>

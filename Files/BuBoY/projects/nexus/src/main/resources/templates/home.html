@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html th:replace="~{layouts/main :: layout(~{:: #main-content}, 'home')}">
+    
+    <div id="main-content">
+        <h1>Welcome to the Nexus</h1>
+        <p>This is the company dashboard. Notice the header above?</p>
+        <p>It was injected by the layout!</p>
+    </div>
+
+</html>
