@@ -1,0 +1,13 @@
+package com.example.cloud_cafe;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CloudCafeApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

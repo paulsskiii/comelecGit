@@ -1,0 +1,31 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: cloud-cafe
+  profiles:
+    active: dev
+
+
+
+server:
+  port: 9090
+  servlet:
+    context-path: /cafe
+
+
+logging:
+  level:
+   '[org.springframework.web]': DEBUG
+
+# ===============================
+# CONTACT DETAILS (Grouping)
+# ===============================
+cafe:
+  name: Original Cloud Java
+  contact:
+   email: manager@cloudcafe.com
+   phone: 555-0199
+
+
+
