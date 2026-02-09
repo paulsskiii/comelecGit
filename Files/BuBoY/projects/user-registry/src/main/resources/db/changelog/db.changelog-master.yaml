@@ -1,0 +1,36 @@
+databaseChangeLog:
+  # CHANGE SET 1: The Foundation
+  # We create the initial table structure.
+  - changeSet:
+      id: "001-create-users-table"
+      author: "student-dev"
+      changes:
+        - createTable:
+            tableName: "users"
+            columns:
+              - column:
+                  name: "id"
+                  type: "bigint"
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: "username"
+                  type: "varchar(50)"
+                  constraints:
+                    nullable: false
+
+  # CHANGE SET 2: The Evolution (The Golden Rule)
+  # Scenario: The client asked for an 'email' field later.
+  # RULE: Do NOT edit ChangeSet 001. Create ChangeSet 002.
+  - changeSet:
+      id: "002-add-email-column"
+      author: "student-dev"
+      changes:
+        - addColumn:
+            tableName: "users"
+            columns:
+              - column:
+                  name: "email"
+                  type: "varchar(255)"
