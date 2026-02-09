@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Cloud-Cafe
+server:
+  port: 8080
+  servlet:
+    context-path: /cafe
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+
+cafe:
+  name: "Original Cloud Java"
+  special: "Experimental Espresso"
+  contact:
+    email: "manager@cloudcafe.com"
+    phone: "555-0199"

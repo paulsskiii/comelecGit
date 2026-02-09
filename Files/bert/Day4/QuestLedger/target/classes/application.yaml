@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: QuestLedger
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  datasource:
+    url: jdbc:h2:mem:questledgerdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+springdoc:
+     api-docs:
+       path: /docs/openapi
+     swagger-ui: 
+       path: /docs
+       tagsSorter: alpha

@@ -1,0 +1,18 @@
+package com.example.DevLaunch.controller;
+
+import org.springframework.ui.Model;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class DashboardController {
+    @GetMapping("/polyglot")
+    public String showDashboard(Model model) {
+        // We pass a dynamic value "Alex" to the model.
+        // We want the result to be "Welcome, Alex!" or "¡Bienvenido, Alex!"
+        model.addAttribute("username", "Alex");
+
+        return "polyglot";
+    }
+
+}
