@@ -1,6 +1,5 @@
 package com.learning.smartwallet.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -19,10 +18,6 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity // Hints to Spring that this is a security config
 public class SecurityConfig {
     // We will add beans here in the next steps
-    // Inside Class
-    // We define the variable here, but we DON'T use it to build the user yet.
-    @Value("${ADMIN_PASS:securePass}")
-    private String adminPassword;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -31,20 +26,15 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
-        // // Define User 1: The Viewer
+        // Define User 1: The Viewer
         UserDetails user = User.withUsername("john")
                 .password(encoder.encode("password123")) // Hash the password
                 .roles("USER")
                 .build();
 
-        // // Define User 2: The Manager
-        // UserDetails admin = User.withUsername("boss")
-        // .password(encoder.encode("securePass"))
-        // .roles("ADMIN")
-        // .build();
-
+        // Define User 2: The Manager
         UserDetails admin = User.withUsername("boss")
-                .password(encoder.encode(adminPassword)) // Now valid because we are inside the method
+                .password(encoder.encode("securePass"))
                 .roles("ADMIN")
                 .build();
 
