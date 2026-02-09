@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Smart Welcome System
+
+server:
+  port: 9090
+
+debug: true

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: RestfulSnacks
+
+springdoc:
+  api-docs:
+    path: /docs/openapi
+  swagger-ui: 
+    path: /docs
+    tagsSorter: alpha

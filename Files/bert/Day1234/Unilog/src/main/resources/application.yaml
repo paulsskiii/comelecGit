@@ -1,0 +1,19 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  application:
+    name: Unilog
+  datasource:
+    url: jdbc:h2:mem:unilog_db
+    username: sa 
+    password: 
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Tech-Startup-Name-Generator
+server:
+  port: 8081

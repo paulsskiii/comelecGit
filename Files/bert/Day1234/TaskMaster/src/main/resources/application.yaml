@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: TaskMaster
+springdoc:
+  api-docs:
+    path: /docs/openapi
+    enabled: true
+  swagger-ui: 
+    path: /docs
+    tagsSorter: alpha
