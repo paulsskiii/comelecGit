@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.util.Map;
-import com.example.smartwallet.ExpenseNotFoundException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {

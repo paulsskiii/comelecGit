@@ -2,7 +2,7 @@ package com.example.smartwallet;
 
 import java.math.BigDecimal;
 
-import lombok.Data;
+//import lombok.Data;
 
 // @Data
 public class ExpenseRequestDTO {

@@ -1,11 +1,9 @@
 spring:
-  application:
-    name: smartwallet
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:file:./data/smartwallet_prod_db
     driverClassName: org.h2.Driver
-    username: sa
-    password: 
+    username: ${DB_USER}
+    password: ${DB_PASS}
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -14,8 +12,11 @@ spring:
     console:
       enabled: true
       path: /h2-console
-  #liquibase:
-   # change-log: classpath:db/changelog/db.changelog-master.yaml
-
 server:
-  port: 8080
+  port: ${PORT:9090}
+
+
+logging:
+  level:
+    org.springframework: ERROR
+    com.example: INFO
