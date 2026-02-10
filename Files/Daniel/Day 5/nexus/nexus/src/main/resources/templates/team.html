@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html th:replace="~{layouts/main :: layout(~{:: #team-list}, 'team',~{:: #news-list})}">
+    <div id="news-list">
+        <h1>Here are some team news!</h1>
+        <ul>
+            <li>Winners!</li>
+            <li>Rankings</li>
+            <li>Strategies</li>
+        </ul>
+    </div>    
+
+
+    <div id="team-list">
+        <h1>Employee Directory</h1>
+        <ul>
+            <li>Alice Director</li>
+            <li>Bob Engineer</li>
+            <li>Charlie Designer</li>
+        </ul>
+    </div>
+
+
+    
+</html>

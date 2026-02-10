@@ -1,0 +1,16 @@
+2026-02-05T15:23:36.133+08:00  INFO 14496 --- [logging-demo] [main] c.a.logging_demo.LoggingDemoApplication  : Starting LoggingDemoApplication using Java 17.0.12 with PID 14496 (C:\Users\PX1-User19\Documents\SpringBoot\Day 4\logging-demo\logging-demo\target\classes started by PX1-User19 in C:\Users\PX1-User19\Documents\SpringBoot\Day 4\logging-demo)
+2026-02-05T15:23:36.138+08:00  INFO 14496 --- [logging-demo] [main] c.a.logging_demo.LoggingDemoApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-02-05T15:23:36.983+08:00  INFO 14496 --- [logging-demo] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-02-05T15:23:36.997+08:00  INFO 14496 --- [logging-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-05T15:23:36.997+08:00  INFO 14496 --- [logging-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-05T15:23:37.033+08:00  INFO 14496 --- [logging-demo] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 841 ms
+2026-02-05T15:23:37.458+08:00  INFO 14496 --- [logging-demo] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-02-05T15:23:37.464+08:00  INFO 14496 --- [logging-demo] [main] c.a.logging_demo.LoggingDemoApplication  : Started LoggingDemoApplication in 1.755 seconds (process running for 2.042)
+2026-02-05T15:23:43.820+08:00  INFO 14496 --- [logging-demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-05T15:23:43.820+08:00  INFO 14496 --- [logging-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-05T15:23:43.837+08:00  INFO 14496 --- [logging-demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-05T15:23:43.994+08:00  INFO 14496 --- [logging-demo] [http-nio-8080-exec-1] c.a.logging_demo.TransactionController   : Received API Request at /pay
+2026-02-05T15:23:43.995+08:00  INFO 14496 --- [logging-demo] [http-nio-8080-exec-1] c.a.logging_demo.TransactionService      : Transaction processed successfully for user: Alice
+2026-02-05T15:24:15.150+08:00  INFO 14496 --- [logging-demo] [http-nio-8080-exec-2] c.a.logging_demo.TransactionController   : Received API Request at /pay
+2026-02-05T15:24:15.151+08:00  WARN 14496 --- [logging-demo] [http-nio-8080-exec-2] c.a.logging_demo.TransactionService      : High value transaction detected! Amount: $50000.0. Flagging for audit.
+2026-02-05T15:24:15.152+08:00  INFO 14496 --- [logging-demo] [http-nio-8080-exec-2] c.a.logging_demo.TransactionService      : Transaction processed successfully for user: Bob
